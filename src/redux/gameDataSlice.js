@@ -28,6 +28,7 @@ export const gameDataSlice = createSlice({
       })
       .addCase(fetchData.rejected, (state, action) => {
         state.error = action.error;
+        state.loading = false;
       });
   },
 });
