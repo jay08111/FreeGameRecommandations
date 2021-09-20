@@ -7,7 +7,7 @@ const initialState = {
 };
 export const fetchData = createAsyncThunk("game/fetchData", async () => {
   const res = await axios.get(game);
-  return res;
+  return res.data;
 });
 export const gameDataSlice = createSlice({
   name: "gameData",
@@ -22,8 +22,8 @@ export const gameDataSlice = createSlice({
       .addCase(fetchData.pending, (state, action) => {
         state.loading = true;
       })
-      .addCase(fetchData.fulfilled, (state, action) => {
-        state.gameData = action.payload;
+      .addCase(fetchData.fulfilled, (state, { payload }) => {
+        state.gameData = payload;
         state.loading = false;
       })
       .addCase(fetchData.rejected, (state, action) => {
