@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchData } from "./redux/gameDataSlice";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+
 function App() {
   const dispatch = useDispatch();
   const { gameData } = useSelector((state) => state.game);
@@ -8,14 +10,13 @@ function App() {
     dispatch(fetchData());
   }, [dispatch]);
   return (
-    <div className="App">
-      <h1>App component</h1>
-      <div>
-        {gameData.slice(0, 3).map(({ title, id }) => (
-          <h1 key={id}>{title}</h1>
-        ))}
-      </div>
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
