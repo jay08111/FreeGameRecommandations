@@ -42,5 +42,5 @@ export const gameDataSlice = createSlice({
   },
 });
 
-export const {} = gameDataSlice.actions;
+export const { asd } = gameDataSlice.actions;
 export default gameDataSlice.reducer;

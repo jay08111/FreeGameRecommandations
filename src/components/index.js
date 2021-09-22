@@ -8,6 +8,7 @@ import SingleGame from "./SingleGame/SingleGame";
 import Explain from "./SingleGame/Explain";
 import SingleImage from "./SingleGame/SingleImage";
 import AddMyList from "./SingleGame/AddMyList";
+import AskSomeThing from "./Main/AskSomeThing";
 export {
   Footer,
   Loading,
@@ -19,4 +20,5 @@ export {
   Explain,
   SingleImage,
   AddMyList,
+  AskSomeThing,
 };
