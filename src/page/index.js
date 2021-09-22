@@ -1,6 +1,6 @@
-import Error from "./Error";
-import Games from "./Games";
-import Home from "./Home";
+import ErrorPage from "./ErrorPage";
+import GamesPage from "./GamesPage";
+import HomePage from "./HomePage";
 import SingleGamePage from "./SingleGamePage";
-
-export { Error, Games, Home, SingleGamePage };
+import MyPage from "./MyPage";
+export { ErrorPage, GamesPage, HomePage, SingleGamePage, MyPage };

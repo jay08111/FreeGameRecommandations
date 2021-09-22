@@ -1,7 +1,7 @@
 import React from "react";
 
 function Games() {
-  return <h1>Game Component</h1>;
+  return <h1>GamePage</h1>;
 }
 
 export default Games;
