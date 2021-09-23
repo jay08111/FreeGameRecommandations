@@ -10,10 +10,11 @@ function SingleGamePage() {
   useEffect(() => {
     dispatch(fetchData(id));
   }, [dispatch, id]);
-  console.log(id);
+  const { singleGameData } = useSelector((state) => state.game);
+  const { title } = singleGameData;
   return (
     <Wrapper>
-      <Hero />
+      <Hero title={title} />
       <SingleGame />
     </Wrapper>
   );

@@ -1,6 +1,6 @@
 import React from "react";
 
-function Explain() {
+function Explain({ description, developer, genre, platform, publisher, date }) {
   return <h1>Explain Component</h1>;
 }
 

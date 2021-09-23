@@ -1,6 +1,6 @@
 import React from "react";
 
-function Hero() {
+function Hero({ title }) {
   return <h1>Hero component</h1>;
 }
 
