@@ -5,13 +5,13 @@ import { singleGame } from "../../util/helper";
 const initialState = {
   gameData: [],
   loading: false,
-  singleGameData: [],
+  singleGameData: {},
 };
 export const fetchData = createAsyncThunk(
   "game/fetchData",
   async (id = null) => {
     if (id !== null) {
-      const res = await axios.get(singleGame);
+      const res = await axios.get(`${singleGame}${id}`);
       return { data: res.data, id: id };
     }
     const res = await axios.get(game);

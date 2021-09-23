@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 function Games() {
   const { gameData } = useSelector((state) => state.game);
   return (
@@ -10,7 +11,9 @@ function Games() {
         return (
           <article key={id} className="pictures">
             <div className="data-div">
-              <img src={thumbnail} alt={title} className="thumbnail" />
+              <Link to={`/games/${id}`}>
+                <img src={thumbnail} alt={title} className="thumbnail" />
+              </Link>
               <p>{des}</p>
             </div>
           </article>
@@ -20,7 +23,6 @@ function Games() {
   );
 }
 const Wrapper = styled.div`
-  min-height: 60vh;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;

@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 function Purpose() {
   return (
-    <Wrapper>
+    <Wrapper className="section">
       <article className="left">
         <h1>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil
@@ -24,8 +24,8 @@ function Purpose() {
   );
 }
 const Wrapper = styled.section`
-  min-height: 60vh;
   display: flex;
+
   .left {
     flex: 1;
   }

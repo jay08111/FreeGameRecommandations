@@ -11,4 +11,9 @@ export const menu = [
     text: "games",
     url: "/games",
   },
+  {
+    id: 3,
+    text: "MyPage",
+    url: "/mypage",
+  },
 ];
