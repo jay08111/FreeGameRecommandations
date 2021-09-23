@@ -3,9 +3,7 @@ import styled from "styled-components";
 function Footer() {
   return (
     <Wrapper>
-      <h1>
-        &copy; Copyright <br />
-      </h1>
+      <h1>&copy; Copyright</h1>
       <h1>{new Date().getFullYear()} Made by Hoyeoun Byun</h1>
     </Wrapper>
   );

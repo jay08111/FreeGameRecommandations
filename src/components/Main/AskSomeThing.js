@@ -8,6 +8,6 @@ function AskSomeThing() {
   );
 }
 const Wrapper = styled.section`
-  min-height: 60vh;
+  min-height: 40vh;
 `;
 export default AskSomeThing;

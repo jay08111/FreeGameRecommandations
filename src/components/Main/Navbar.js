@@ -1,14 +1,22 @@
 import React from "react";
 import styled from "styled-components";
 import { BiLogIn } from "react-icons/bi";
+import { Link } from "react-router-dom";
+import { menu } from "../../util/helper";
 function Navbar() {
   return (
     <Wrapper>
       <div className="logo">
-        <img src={process.env.PUBLIC_URL + "/logo.jpg"} alt="logo" />
+        <Link to="/" className="logo-p">
+          Free-Game
+        </Link>
       </div>
       <div className="text">
-        <input type="text" />
+        {menu.map(({ id, url, text }) => (
+          <Link to={url} key={id} className="menu">
+            {text}
+          </Link>
+        ))}
       </div>
       <div className="icon">
         <BiLogIn />
@@ -27,11 +35,6 @@ const Wrapper = styled.nav`
   justify-content: space-around;
   align-items: center;
 
-  .text input {
-    width: 40vw;
-    margin-right: 5rem;
-  }
-
   .logo img {
     height: 10vh;
     width: 10vw;
@@ -39,6 +42,21 @@ const Wrapper = styled.nav`
   .icon {
     font-size: 30px;
     color: #fff;
+  }
+  .logo-p {
+    text-decoration: none;
+    color: #fff;
+    font-size: 3rem;
+  }
+  .text {
+    width: 20vw;
+    display: flex;
+    justify-content: space-around;
+  }
+  .menu {
+    text-decoration: none;
+    color: #fff;
+    font-size: 2rem;
   }
 `;
 export default Navbar;

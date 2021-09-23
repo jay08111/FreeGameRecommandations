@@ -9,6 +9,7 @@ import Explain from "./SingleGame/Explain";
 import SingleImage from "./SingleGame/SingleImage";
 import AddMyList from "./SingleGame/AddMyList";
 import AskSomeThing from "./Main/AskSomeThing";
+import GameFeatured from "./Main/GameFeatured";
 export {
   Footer,
   Loading,
@@ -21,4 +22,5 @@ export {
   SingleImage,
   AddMyList,
   AskSomeThing,
+  GameFeatured,
 };
