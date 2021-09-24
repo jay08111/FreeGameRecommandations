@@ -1,34 +1,25 @@
 import React from "react";
 import styled from "styled-components";
-import { SingleImage, Explain, AddMyList, GameUrls } from "../index";
+import {
+  ImageContainer,
+  Explain,
+  AddMyList,
+  GameUrls,
+  Loading,
+} from "../index";
 import { useSelector } from "react-redux";
 function SingleGame() {
-  const { singleGameData } = useSelector((state) => state.game);
-  const {
-    id,
-    description,
-    developer,
-    freetogame_profile_url: profile,
-    game_url: game,
-    genre,
-    platform,
-    publisher,
-    release_date: date,
-    screenshots,
-    thumbnail,
-  } = singleGameData;
+  const { singleGameData, loading } = useSelector((state) => state.game);
+  const { freetogame_profile_url: profile, game_url: game } = singleGameData;
   console.log(singleGameData);
+  if (loading) {
+    return <Loading />;
+  }
   return (
     <Wrapper>
-      <SingleImage thumbnail={thumbnail} screenshots={screenshots} />
-      <Explain
-        description={description}
-        developer={developer}
-        genre={genre}
-        platform={platform}
-        publisher={publisher}
-        date={date}
-      />
+      <div>
+        <ImageContainer />
+      </div>
       <GameUrls profile={profile} game={game} />
       <AddMyList />
     </Wrapper>

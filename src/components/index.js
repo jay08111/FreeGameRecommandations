@@ -6,7 +6,7 @@ import Games from "./Main/Games";
 import Hero from "./SingleGame/Hero";
 import SingleGame from "./SingleGame/SingleGame";
 import Explain from "./SingleGame/Explain";
-import SingleImage from "./SingleGame/SingleImage";
+import ImageContainer from "./SingleGame/ImageContainer";
 import AddMyList from "./SingleGame/AddMyList";
 import AskSomeThing from "./Main/AskSomeThing";
 import GameFeatured from "./Main/GameFeatured";
@@ -20,7 +20,7 @@ export {
   Hero,
   SingleGame,
   Explain,
-  SingleImage,
+  ImageContainer,
   AddMyList,
   AskSomeThing,
   GameFeatured,

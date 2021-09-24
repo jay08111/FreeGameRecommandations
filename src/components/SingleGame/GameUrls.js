@@ -1,7 +1,12 @@
 import React from "react";
 
 function GameUrls({ profile, game }) {
-  return <h1>Game Url components</h1>;
+  return (
+    <div>
+      <h1>{profile}</h1>
+      <h1>{game}</h1>
+    </div>
+  );
 }
 
 export default GameUrls;

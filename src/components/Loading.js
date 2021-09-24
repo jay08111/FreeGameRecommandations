@@ -1,7 +1,9 @@
 import React from "react";
-
-function Loading() {
-  return <h1>loading component</h1>;
+import ReactLoading from "react-loading";
+function Loading({ type, color }) {
+  return (
+    <ReactLoading type={type} color={color} height={"20%"} width={"20%"} />
+  );
 }
 
 export default Loading;
