@@ -9,3 +9,7 @@ h1 {
 .section {
   padding: 5rem 0;
 }
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+}

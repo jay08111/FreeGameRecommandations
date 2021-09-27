@@ -11,6 +11,8 @@ import AddMyList from "./SingleGame/AddMyList";
 import AskSomeThing from "./Main/AskSomeThing";
 import GameFeatured from "./Main/GameFeatured";
 import GameUrls from "./SingleGame/GameUrls";
+import GamePageGames from "./Main/GamePageGames";
+import Filter from "./Main/Filter";
 export {
   Footer,
   Loading,
@@ -25,4 +27,6 @@ export {
   AskSomeThing,
   GameFeatured,
   GameUrls,
+  GamePageGames,
+  Filter,
 };
