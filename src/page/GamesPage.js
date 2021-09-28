@@ -1,10 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import { GamePageGames } from "../components/index";
+import { GamePageGames, Hero } from "../components/index";
 import { Filter } from "../components/index";
 function Games() {
   return (
     <Wrapper>
+      <Hero title="GamePage" />
       <section className="section-center">
         <div className="container">
           <Filter />
