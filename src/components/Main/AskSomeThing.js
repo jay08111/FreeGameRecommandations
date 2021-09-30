@@ -4,6 +4,9 @@ function AskSomeThing() {
   return (
     <Wrapper className="section">
       <div className="form-container">
+        <div className="problem">
+          <h1>if you have a problem then please contact us!</h1>
+        </div>
         <form
           action="https://formspree.io/f/xwkawznq"
           method="POST"
@@ -15,6 +18,7 @@ function AskSomeThing() {
             placeholder="이메일을 적어주세요!"
             className="form-input"
           />
+
           <button type="submit" className="form-btn">
             submit
           </button>
@@ -38,7 +42,11 @@ const Wrapper = styled.section`
   }
 
   .form-container {
-    width: 40vw;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
+  .problem {
   }
 `;
 export default AskSomeThing;
