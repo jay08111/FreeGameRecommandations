@@ -12,7 +12,7 @@ function GameFeatured() {
     <Wrapper className="section">
       <h1>Games</h1>
       <Games />
-      <Link to="/games">More Games</Link>
+      <Link to="/games">More Games ... </Link>
     </Wrapper>
   );
 }

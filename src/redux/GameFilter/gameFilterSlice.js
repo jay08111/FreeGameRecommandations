@@ -3,9 +3,9 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   filterdGameData: [],
   options: {
-    genre: "",
-    platform: "",
-    publisher: "",
+    genre: "all",
+    platform: "all of companies",
+    publisher: "all publishers",
     release_date: "2000-01-01",
   },
 };
