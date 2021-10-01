@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { fetchData } from "./redux/GameData/gameDataSlice";
+import { setFilterdData } from "./redux/GameFilter/gameFilterSlice";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import {
   HomePage,
@@ -12,9 +13,14 @@ import {
 import { Navbar, Footer } from "./components/index";
 function App() {
   const dispatch = useDispatch();
+  const { gameData } = useSelector((state) => state.game);
   useEffect(() => {
     dispatch(fetchData());
   }, [dispatch]);
+  useEffect(() => {
+    dispatch(setFilterdData(gameData));
+  }, [dispatch, gameData]);
+
   return (
     <Router>
       <Navbar />
