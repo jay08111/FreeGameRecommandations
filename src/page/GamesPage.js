@@ -24,6 +24,7 @@ const Wrapper = styled.main`
   }
   .container {
     position: sticky;
+    display: flex;
   }
 `;
 export default Games;
