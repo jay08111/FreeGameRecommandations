@@ -8,13 +8,7 @@ function GameFeatured() {
   if (loading) {
     return <Loading />;
   }
-  return (
-    <Wrapper className="section">
-      <h1>Games</h1>
-      <Games />
-      <Link to="/games">More Games ... </Link>
-    </Wrapper>
-  );
+  return <h1>GameFeatured Component</h1>;
 }
 const Wrapper = styled.section``;
 export default GameFeatured;

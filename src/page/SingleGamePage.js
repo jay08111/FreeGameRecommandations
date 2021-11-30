@@ -12,12 +12,6 @@ function SingleGamePage() {
   }, [dispatch, id]);
   const { singleGameData } = useSelector((state) => state.game);
   const { title } = singleGameData;
-  return (
-    <Wrapper>
-      <Hero title={title} />
-      <SingleGame />
-    </Wrapper>
-  );
+  return <h1>SingleGamePage</h1>;
 }
-const Wrapper = styled.main``;
 export default SingleGamePage;

@@ -9,23 +9,7 @@ import {
 } from "../index";
 import { useSelector } from "react-redux";
 function SingleGame() {
-  const { singleGameData, loading } = useSelector((state) => state.game);
-  const { freetogame_profile_url: profile, game_url: game } = singleGameData;
-  console.log(singleGameData);
-  if (loading) {
-    return <Loading />;
-  }
-  return (
-    <Wrapper>
-      <div>
-        <ImageContainer />
-      </div>
-      <GameUrls profile={profile} game={game} />
-      <AddMyList />
-    </Wrapper>
-  );
+  return <h1>Single Game Component</h1>;
 }
-const Wrapper = styled.article`
-  background-color: #000;
-`;
+
 export default SingleGame;
